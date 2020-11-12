@@ -13,4 +13,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BrokerEngine\BrokerEngine.csproj" />
+  </ItemGroup>
+
 </Project>
