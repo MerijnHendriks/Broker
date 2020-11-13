@@ -6,14 +6,14 @@
 
 namespace BrokerEngine
 {
-    public class Record
+    public class Price
     {
         public Currency from;
         public Currency to;
         public long timestamp;
         public double value;
 
-        public Record(Currency from, Currency to, long timestamp, double value)
+        public Price(Currency from, Currency to, long timestamp, double value)
         {
             this.from = from;
             this.to = to;

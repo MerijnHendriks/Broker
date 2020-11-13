@@ -11,25 +11,25 @@ namespace BrokerEngine
 {
     public static class Broker
     {
-        static List<Record> priceHistory;
+        static List<Price> priceHistory;
 
         static Broker()
         {
-            priceHistory = new List<Record>();
+            priceHistory = new List<Price>();
         }
 
         public static void AddRecord(Currency from, Currency to, long timestamp, double value)
         {
-            priceHistory.Add(new Record(from, to, timestamp, value));
+            priceHistory.Add(new Price(from, to, timestamp, value));
         }
 
         public static double getPrice(Currency from, Currency to, long timestamp)
         {
-            foreach (Record record in priceHistory)
+            foreach (Price price in priceHistory)
             {
-                if (record.timestamp == timestamp && record.from == from && record.to == to)
+                if (price.timestamp == timestamp && price.from == from && price.to == to)
                 {
-                    return record.value;
+                    return price.value;
                 }
             }
 
