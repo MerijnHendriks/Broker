@@ -38,19 +38,19 @@ namespace BrokerEngine
 
         public static bool Buy(Currency from, Currency to, long timestamp, double amount)
         {
-            if (Person.Portfolio[from] < amount)
-            {
-                // no sufficient funds
-                Console.WriteLine($"Not enough money of {from} in portfolio");
-                return false;
-            }
-
             double price = getPrice(from, to, timestamp);
 
             if (price == double.NaN)
             {
                 // price record not found
                 Console.WriteLine($"Broker couldn't find price for {from}, {to}, {timestamp} in price history");
+                return false;
+            }
+            
+            if (Person.Portfolio[from] < price * amount)
+            {
+                // no sufficient funds
+                Console.WriteLine($"Not enough money of {from} in portfolio");
                 return false;
             }
 
