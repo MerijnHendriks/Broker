@@ -4,8 +4,7 @@ A broker simulation engine for testing sell strategies
 
 ## Requirements
 
-- [.NET Core 3.1](https://docs.microsoft.com/en-us/dotnet/core/install)
-- [netcoredbg](https://github.com/Samsung/netcoredbg/releases/latest)
+- [.NET 5](https://docs.microsoft.com/en-us/dotnet/core/install)
 - [VSCodium](https://github.com/VSCodium/vscodium/releases/latest)
 
 ## Setup
@@ -14,11 +13,11 @@ A broker simulation engine for testing sell strategies
 2. `git clone https://github.com/MerijnHendriks/Broker.git`
 3. Open `solution.code-workspace` in VSCodium
 
-## Debugging
+## Run
 
-- VCodium > Run > Start Debugging
+- VCodium > Terminal > Run task... > run
 
-## Building
+## Build
 
 - VCodium > Terminal > Run Build Task...
 
