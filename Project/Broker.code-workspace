@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"mhutchie.git-graph"
+		]
+	},
+	"settings": {
+		"window.title": "Broker",
+		"git-graph.commitDetailsViewLocation": "Docked to Bottom",
+	}
+}
