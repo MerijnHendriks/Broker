@@ -26,9 +26,9 @@ namespace BrokerEngine
 
         public static void Print()
         {
-            foreach (Currency currency in Enum.GetValues(typeof(Currency)))
+            foreach (KeyValuePair<Currency, double> entry in Portfolio)
             {
-                Console.WriteLine($"{currency}: {Portfolio[currency]}");
+                Console.WriteLine($"{entry.Key}: {entry.Value}");
             }
         }
     }
